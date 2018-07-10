@@ -1,3 +1,4 @@
+import { ArtyomService } from './artyom.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ARTYOM_CONFIG, Config } from './config';
 
@@ -5,7 +6,8 @@ import { ARTYOM_CONFIG, Config } from './config';
   imports: [
   ],
   declarations: [],
-  exports: []
+  exports: [],
+  providers: [ArtyomService]
 })
 export class ArtyomModule {
   static forRoot(config: Config): ModuleWithProviders {

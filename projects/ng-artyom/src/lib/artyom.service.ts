@@ -1,11 +1,10 @@
 import { ARTYOM_CONFIG, Config } from './config';
 import { Injectable, NgZone, Inject } from '@angular/core';
 import Artyom from 'artyom.js/build/artyom.js';
-import { Subject, Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ArtyomService {
 
   private artyom;

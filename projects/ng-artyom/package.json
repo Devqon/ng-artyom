@@ -1,10 +1,11 @@
 {
-  "name": "ng-artyom",
+  "name": "ng5-artyom",
   "version": "0.0.1-alpha",
+  "homepage": "https://github.com/Devqon/ng-artyom",
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
-    "rxjs": "^6.0.0"
+    "@angular/common": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "rxjs": "^5.5.11"
   },
   "dependencies": {
     "artyom.js": "^1.0.6"
