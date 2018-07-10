@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "ng-artyom": {
+      "root": "projects/ng-artyom",
+      "sourceRoot": "projects/ng-artyom/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-artyom/tsconfig.lib.json",
+            "project": "projects/ng-artyom/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-artyom/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-artyom/src/test.ts",
+            "tsConfig": "projects/ng-artyom/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-artyom/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-artyom/tsconfig.lib.json",
+              "projects/ng-artyom/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-artyom-app"
